@@ -37,7 +37,10 @@
   </head>
   <body class="bg-light" id="page-top">
    
-    {% include 'includes/main-header.html' %}
+    {% include 'includes/main-nav.html' %}
+
+      {% block page_header %}
+    {% endblock %}
     
     {% if messages %}
         <div class="message-container"></div>
@@ -47,14 +50,62 @@
   <script src="{% static 'js/style.js' %}" charset="utf-8"></script>
   {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+  
 
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
     {% endblock %}
+      <footer class="page-footer font-small footer-color pt-4">
+      <!-- Footer links -->
+      <hr>
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+          <!--Copyright-->
+          <p class="text-center text-md-left text-white">© 2020 Copyright:
+            <a href="">
+              <strong class="text-light"> Tour Project</strong>
+            </a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/" class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitter.com/" class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/" class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/" class="btn-floating btn-sm rgba-white-slight mx-1 text-light" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+  </footer>
+  <!-- Footer -->
 
 
 

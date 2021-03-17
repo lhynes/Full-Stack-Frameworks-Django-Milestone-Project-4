@@ -4,12 +4,51 @@ html {
 
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    /* background: url('/media/homepage_background_video.mp4') no-repeat center center fixed;*/ 
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
+
+/* startbootstrap code below  <<<< */
+/*
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container3 {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+} */
 
 /* from Bulma */
 .icon {
@@ -113,6 +152,7 @@ body {
   border-radius: .25rem;
   color: rgba(0, 0, 0, .5);
   border-color: rgba(0, 0, 0, .1);
+  background-color: #fff;
 }
 
 .navbar-toggler-icon {
@@ -160,6 +200,13 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+
+}
+
+@media (max-width: 991.98px){
+    .navbar {
+        background: #fff;
     }
 }
 

@@ -2,14 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
-{% block content %}
     <div class="container h-100">
         <div class="row h-100">
             <div class="my-auto mx-auto">
@@ -35,167 +27,117 @@
             </div>
         </div>
     </div>
+{% endblock %}
 
-
-<!-- About Section -->
-<section id="about" class="about-section text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 mx-auto">
-				<h2 class="text-white mb-4">Book to Space</h2>
-				<p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
-					science fiction, this is technology and innovation meeting reality. In close collaboration with all
-					major aerospace agencies in the world, we are able to coordinate various types of trips to space.
-				</p>
-			</div>
-		</div>
-		<img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
-    </div>
-</section>
-
-<!-- Trips Section -->
-<section id="projects" class="projects-section bg-light">
-	<div class="container">
-
-		<!-- Trips for individuals -->
-		<div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-			<div class="col-lg-6">
-				<img class="img-fluid" src="{% static 'img/iss-nasa.jpg' %}" alt="Individuals">
-            </div>
-			<div class="col-lg-6">
-				<div class="bg-black text-center h-100 project">
-					<div class="d-flex h-100">
-						<div class="project-text w-100 my-auto text-center text-lg-left">
-							<h4 class="text-white">Trips for individuals</h4>
-							<p class="mb-0 text-white-50">
-                                We organize various trips several times a year to bring people and (not just
-                                astronauts) to explore different parts of our solar system. Most of these trips
-                                are operated from various bases such as the Kennedy Space Center in the US. If you want to
-                                experience gravity-free environement without going to space, we also offer a
-                                wide range of parabolic flights from various airports across the world.
-							</p>
-							<hr class="d-none d-lg-block mb-0 ml-0">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Trips for scientists -->
-		<div class="row justify-content-center no-gutters">
-			<div class="col-lg-6">
-				<img class="img-fluid" src="{% static 'img/scientists.jpg' %}" alt="Scientists">
-            </div>
-			<div class="col-lg-6 order-lg-first">
-				<div class="bg-black text-center h-100 project">
-					<div class="d-flex h-100">
-						<div class="project-text w-100 my-auto text-center text-lg-right">
-							<h4 class="text-white">Trips for scientists</h4>
-							<p class="mb-0 text-white-50">
-                                We can organize tailor-made scientifc flights to assist you in your scientific research. 
-                                Weightlessness is an incredibly innovative tool to enhance fundamental knowledge in various disciplines such as physics, medicine, biology...
-                                We can assist you in your scientific experiences by setting up the logistic you need to be in a microgravity environement be it through parabolic flights or real space trips. These services can significantly contribute to the expansion of our knowledge in many scientific disciplines. 
-							</p>
-							<hr class="d-none d-lg-block mb-0 mr-0">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</section>
-
-<!-- Stat Section -->
-<section id="stat" class="stat-section bg-black">
-	<div class="container">
-		<div class="row">
-
-            <div class="col-12 mt-5 mb-5 text-center">
-                <h2 class="text-white mb-3">Spacex</h2>
-                <hr class="mb-3">
-                <p class="text-white-50">The first space travel operator in the world.</p>
-            </div>
-
-            <div class="row justify-content-center mx-auto mb-5">
-
-                <div class="col-12 col-md-6 col-lg-2 text-center">
-                    <i class="fas fa-users stat-icon"></i>
-                    <p class="text-white mt-2">500 passengers</p>
+{% block content %}
+    <!-- Top Adventures Section -->
+    <section id="about" class="about-section text-center bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Top Adventures</h2>
+                    <p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
+                        science fiction, this is technology and innovation meeting reality. In close collaboration with all
+                        major aerospace agencies in the world, we are able to coordinate various types of trips to space.
+                    </p>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-2 text-center">
-                    <i class="fas fa-space-shuttle stat-icon"></i>
-                    <p class="text-white mt-2">100 space trips</p>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-2 text-center">
-                    <i class="fas fa-globe-americas stat-icon"></i>
-                    <p class="text-white mt-2">1M selfies of earth</p>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-2 text-center">
-                    <i class="fas fa-plane stat-icon"></i>
-                    <p class="text-white mt-2">500 parabolic flights</p>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-2 text-center">
-                    <i class="fas fa-flask stat-icon"></i>
-                    <p class="text-white mt-2">300 scientific experiments</p>
-                </div>
-
             </div>
-
-		</div>
-		
-    </div>
-</section>
-
-<section id="testimony" class="testimony-section bg-light">
-	<div class="container">
-        <div class="row">
-
-            <div class="col-12 mt-5 mb-5 text-center">
-                <h2>Passengers testimonials</h2>
-                <hr class="mb-0">
-            </div>
-
-            {% for testimonial in testimonials %}
-
-                {% if forloop.counter <= 2 %}
-
-                    {% include 'components/testimonials.html' %}
-
-                {% else %}
-
-                <div class="more-testimonials">
-                    {% include 'components/testimonials.html' %}
-                </div>
-
-                {% endif %}
-
-            {% endfor %}
-
-            <div class="col-12 text-center mt-3 mb-5">
-                <button id="btn-testimonials" class="btn btn-primary">Show more</button>
-            </div>
-
+            <img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Book Section -->
-<section id="book" class="book-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-lg-8 ml-auto text-right">
-				<h2 class="text-white mb-5">Would you like to go to space?</h2>
-				<p class="text-white-50">Discover our wide range of trips to space or gravity-flights.</p>
-                    <i class="fas fa-space-shuttle"></i> Book your next trips
-                </a>
-			</div>
-		</div>
-	</div>
-</section>
+    
+
+       <!-- Adventure  Reviews -->
+    <section id="about" class="about-section text-center bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Reviews</h2>
+                    <p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
+                        science fiction, this is technology and innovation meeting reality. In close collaboration with all
+                        major aerospace agencies in the world, we are able to coordinate various types of trips to space.
+                    </p>
+                </div>
+            </div>
+            <img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
+        </div>
+    </section>
+
+       <!-- About Section -->
+    <section id="about" class="about-section text-center bg-success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Destinations</h2>
+                    <p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
+                        science fiction, this is technology and innovation meeting reality. In close collaboration with all
+                        major aerospace agencies in the world, we are able to coordinate various types of trips to space.
+                    </p>
+                </div>
+            </div>
+            <img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
+        </div>
+    </section>
+       <!-- About Section -->
+    <section id="about" class="about-section text-center bg-danger">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">about us and contact form</h2>
+                    <p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
+                        science fiction, this is technology and innovation meeting reality. In close collaboration with all
+                        major aerospace agencies in the world, we are able to coordinate various types of trips to space.
+                    </p>
+                </div>
+            </div>
+            <img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
+        </div>
+        <div class="row">
+  <!-- About us -->
+  <section  class=" col-md-6 py-5 ">
+    <div class="container container2 text-center">
+      <h2 class="text-dark">About Us</h2>
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-sm-9 text">
+          <p class="lead">Tour Retreat born with the idea of bringing people to great places.</p>
+          <p>With ten year of experience, Tour Retreat have changed the life of thousands of people. Helping them with the best choice to travel around the globe and retreat. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ About us -->
+
+  <!-- contact form -->
+    <div class="col-md-5 card card-body card-padding-bottom shadow" data-aos="zoom-out">
+          {% if new_contact %}
+          <div class="alert alert-success" role="alert">
+            Our team will contact you as soon as possible.
+          </div>
+            {% else %}
+
+          <div class=" my-1">
+            <h5>Get in touch:</h5>
+
+                  <div class="form-group">
+              <form method="POST">
+                  {% csrf_token %}
+                  {{ contact_form.as_p}}
+                <button type="submit" class="btn btn-info">Submit</button>
+              </form>
+              </div>
+
+            </div>
+             {% endif %}
+          </div>
+      <!--/ contact form -->
+  </div>
+
+    </section>
+
+
+
+
 
 {% endblock %}
+
