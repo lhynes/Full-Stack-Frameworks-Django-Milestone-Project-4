@@ -17,11 +17,185 @@
                     Start your adventure today 
                 </h1>
                 <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Explore Now</a>
-                    </h4>
+                                <div class="col-12 col-lg-12 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Explore more adventures">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<h2 class="text-white mb-4">Book to Space</h2>
+				<p class="text-white-50">SpaceX is the first travel agency that will fly you to space. This is not
+					science fiction, this is technology and innovation meeting reality. In close collaboration with all
+					major aerospace agencies in the world, we are able to coordinate various types of trips to space.
+				</p>
+			</div>
+		</div>
+		<img src="{% static 'img/nasa-eva.png' %}" class="img-fluid" alt="Nasa Astronaut">
+    </div>
+</section>
+
+<!-- Trips Section -->
+<section id="projects" class="projects-section bg-light">
+	<div class="container">
+
+		<!-- Trips for individuals -->
+		<div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+			<div class="col-lg-6">
+				<img class="img-fluid" src="{% static 'img/iss-nasa.jpg' %}" alt="Individuals">
+            </div>
+			<div class="col-lg-6">
+				<div class="bg-black text-center h-100 project">
+					<div class="d-flex h-100">
+						<div class="project-text w-100 my-auto text-center text-lg-left">
+							<h4 class="text-white">Trips for individuals</h4>
+							<p class="mb-0 text-white-50">
+                                We organize various trips several times a year to bring people and (not just
+                                astronauts) to explore different parts of our solar system. Most of these trips
+                                are operated from various bases such as the Kennedy Space Center in the US. If you want to
+                                experience gravity-free environement without going to space, we also offer a
+                                wide range of parabolic flights from various airports across the world.
+							</p>
+							<hr class="d-none d-lg-block mb-0 ml-0">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Trips for scientists -->
+		<div class="row justify-content-center no-gutters">
+			<div class="col-lg-6">
+				<img class="img-fluid" src="{% static 'img/scientists.jpg' %}" alt="Scientists">
+            </div>
+			<div class="col-lg-6 order-lg-first">
+				<div class="bg-black text-center h-100 project">
+					<div class="d-flex h-100">
+						<div class="project-text w-100 my-auto text-center text-lg-right">
+							<h4 class="text-white">Trips for scientists</h4>
+							<p class="mb-0 text-white-50">
+                                We can organize tailor-made scientifc flights to assist you in your scientific research. 
+                                Weightlessness is an incredibly innovative tool to enhance fundamental knowledge in various disciplines such as physics, medicine, biology...
+                                We can assist you in your scientific experiences by setting up the logistic you need to be in a microgravity environement be it through parabolic flights or real space trips. These services can significantly contribute to the expansion of our knowledge in many scientific disciplines. 
+							</p>
+							<hr class="d-none d-lg-block mb-0 mr-0">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- Stat Section -->
+<section id="stat" class="stat-section bg-black">
+	<div class="container">
+		<div class="row">
+
+            <div class="col-12 mt-5 mb-5 text-center">
+                <h2 class="text-white mb-3">Spacex</h2>
+                <hr class="mb-3">
+                <p class="text-white-50">The first space travel operator in the world.</p>
+            </div>
+
+            <div class="row justify-content-center mx-auto mb-5">
+
+                <div class="col-12 col-md-6 col-lg-2 text-center">
+                    <i class="fas fa-users stat-icon"></i>
+                    <p class="text-white mt-2">500 passengers</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2 text-center">
+                    <i class="fas fa-space-shuttle stat-icon"></i>
+                    <p class="text-white mt-2">100 space trips</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2 text-center">
+                    <i class="fas fa-globe-americas stat-icon"></i>
+                    <p class="text-white mt-2">1M selfies of earth</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2 text-center">
+                    <i class="fas fa-plane stat-icon"></i>
+                    <p class="text-white mt-2">500 parabolic flights</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2 text-center">
+                    <i class="fas fa-flask stat-icon"></i>
+                    <p class="text-white mt-2">300 scientific experiments</p>
+                </div>
+
+            </div>
+
+		</div>
+		
+    </div>
+</section>
+
+<section id="testimony" class="testimony-section bg-light">
+	<div class="container">
+        <div class="row">
+
+            <div class="col-12 mt-5 mb-5 text-center">
+                <h2>Passengers testimonials</h2>
+                <hr class="mb-0">
+            </div>
+
+            {% for testimonial in testimonials %}
+
+                {% if forloop.counter <= 2 %}
+
+                    {% include 'components/testimonials.html' %}
+
+                {% else %}
+
+                <div class="more-testimonials">
+                    {% include 'components/testimonials.html' %}
+                </div>
+
+                {% endif %}
+
+            {% endfor %}
+
+            <div class="col-12 text-center mt-3 mb-5">
+                <button id="btn-testimonials" class="btn btn-primary">Show more</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Book Section -->
+<section id="book" class="book-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-lg-8 ml-auto text-right">
+				<h2 class="text-white mb-5">Would you like to go to space?</h2>
+				<p class="text-white-50">Discover our wide range of trips to space or gravity-flights.</p>
+                    <i class="fas fa-space-shuttle"></i> Book your next trips
+                </a>
+			</div>
+		</div>
+	</div>
+</section>
+
 {% endblock %}
