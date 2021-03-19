@@ -45,7 +45,7 @@ class Adventure(models.Model):
     departure_time = models.TimeField(null=True, blank=True)
     return_date = models.TimeField(null=True, blank=True)
     slot = models.IntegerField(null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(upload_to='adventure_images',null=True, blank=True)
 

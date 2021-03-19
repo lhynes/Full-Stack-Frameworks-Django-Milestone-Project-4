@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q  # Used to generate a search query 
-from .models import Adventure
+from .models import Adventure, Category
 
 
 # Create your views here.
@@ -11,6 +11,15 @@ def all_adventures(request):
 
     adventures = Adventure.objects.all()
     query = None
+    categories = None
+    
+    
+
+    if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            adventures = adventures.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
 
     if request.GET:
         if 'q' in request.GET:
@@ -22,9 +31,11 @@ def all_adventures(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             adventures = adventures.filter(queries)
 
+
     context = {
         'adventures': adventures,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'adventures/adventures.html', context)
