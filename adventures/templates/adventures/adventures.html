@@ -4,16 +4,80 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+                {% include 'includes/main-header.html' %}
+            </div>
         </div>
-    </div>
+    </div> 
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                {{ adventures }}
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Adventures</h2>
+                <h4 class="logo-font">Will add in filter here</h4>
+                <hr class="w-50 mb-1"> <!-- 50% width horizontal rule -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="adventure-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div> <!-- first row -->
+                <div class="row">   <!-- second row -->
+                    {% for adventure in adventures %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="card h-100 border-0">
+                                {% if adventure.image %}
+                                <a href="{% url 'adventure_detail' adventure.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'adventure_detail' adventure.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="lead mb-0">{{ adventure.name }}</p>
+                                    <p class="mb-0 text-left">{{ adventure.adventure_location }}</p>
+
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="mb-0 text-left font-weight-bold"> ‎€{{ adventure.price }}</p>
+                                            <!--{% if adventure.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ adventure.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                       {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
