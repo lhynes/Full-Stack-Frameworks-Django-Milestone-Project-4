@@ -10,21 +10,8 @@ body {
 }
 
 
-/*  -------------------------------------- home header */
-
-
-
 
 /*  -------------------------------------- adventures.html */
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
@@ -33,9 +20,6 @@ a.category-badge > span.badge:hover {
 
 
 /*  -------------------------------------- navbar */
-
-
-/* Nav  */
 
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar << */
 .navbar {
@@ -163,8 +147,7 @@ header .overlay {
   z-index: 1;
 } */
 
-/* from Bulma */
-
+/*  -------------------------------------- From Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -192,6 +175,19 @@ header .overlay {
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -210,9 +206,19 @@ header .overlay {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
 
-
-
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
 
 /* -------------------------------- Media Queries */
 
