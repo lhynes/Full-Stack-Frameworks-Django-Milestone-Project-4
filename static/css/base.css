@@ -18,6 +18,21 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+/*  -------------------------------------- bag.html */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /*  -------------------------------------- navbar */
 
