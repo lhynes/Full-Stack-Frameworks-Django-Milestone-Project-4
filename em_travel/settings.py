@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',   #login via social media accounts
     'home',
     'adventures',
+    'bag',
 ]
 
 MIDDLEWARE = [

@@ -31,7 +31,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'adventures' %}"> < All Adventures</a> | </span>
+                                <span class="small"><a href="{% url 'adventures' %}" class="fas fa-chevron-left"> All Adventures</a> | </span>
                             {% endif %}
                             {{ adventures|length }} Adventures{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
