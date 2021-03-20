@@ -104,7 +104,11 @@ a.category-badge > span.badge:hover {
 }
 
 
-
+.cart-text-info {
+    color: black !important;
+    border-radius: 25px;
+    background-color: white;
+}
 
 
 /* startbootstrap code below  <<<< */
