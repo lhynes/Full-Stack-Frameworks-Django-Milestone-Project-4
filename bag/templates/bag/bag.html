@@ -44,8 +44,8 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.adventure.name }}</strong></p>
-                                        <p class="text-dark border-0 align-middle"><strong>Start Date:</strong>{{ item.adventure.departure_date }}</p>
-                                        <p class="text-dark border-0 align-middle"><strong>End Date:</strong>{{ item.adventure.return_date  }}</p>
+                                        <p class="text-dark border-0 align-middle"><strong>Start Date: </strong>{{ item.adventure.departure_date }}</p>
+                                        <p class="text-dark border-0 align-middle"><strong>End Date: </strong>{{ item.adventure.return_date  }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">‎€{{ item.adventure.price }}</p>
@@ -80,7 +80,7 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fa fa-trash"></i><small>Remove</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fa fa-trash"></i><small> Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.adventure.price | calc_subtotal:item.quantity }}</p>

@@ -257,7 +257,8 @@ header .overlay {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ - adding arrow pointer at top of toast */
+/* color codes from bootstrap CSS  */
 .arrow-up {
     width: 0; 
     height: 0; 
