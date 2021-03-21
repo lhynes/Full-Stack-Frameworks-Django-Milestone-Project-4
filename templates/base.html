@@ -44,7 +44,9 @@
     
     {% if messages %}
         <div class="message-container">
-            
+            {% for message in messages %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% endfor %}
         </div>
     {% endif %}
 
@@ -61,6 +63,9 @@
 
 
    {% block postloadjs %}
+   <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     <!-- Conditional to allow django display the 'active'class instead of JavaScript displaying the links -->
         {% if not message %}
         <script src="{% static 'js/style.js' %}" charset="utf-8"></script>
