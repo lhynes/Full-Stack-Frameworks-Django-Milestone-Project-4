@@ -45,7 +45,17 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% include 'includes/toasts/toast_success.html' %}
+                {% with message.level as level %} <!-- Django levels for different message types.-->
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
@@ -67,9 +77,9 @@
         $('.toast').toast('show');
     </script>
     <!-- Conditional to allow django display the 'active'class instead of JavaScript displaying the links -->
-        {% if not message %}
-        <script src="{% static 'js/style.js' %}" charset="utf-8"></script>
-        {% endif %}
+    {% if not message %}
+    <script src="{% static 'js/style.js' %}" charset="utf-8"></script>
+    {% endif %}
     {% endblock %}
 
     
