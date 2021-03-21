@@ -33,6 +33,9 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.container.bag-containter {
+    max-width: 80%;
+}
 
 /*  -------------------------------------- navbar */
 
