@@ -9,12 +9,3 @@ $(function () {
         }
     });
 });
-
-// for message time on screen
-// will delete image
-
-
-setTimeout(function() {
-  let delete_message = document.getElementById("message_container");
-  delete_message.style.display = "none";
-}, 3000);
