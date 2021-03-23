@@ -26,7 +26,9 @@ var style = {
     }
 };
 // https://stripe.com/docs/js/elements_object/create_element?type=card#elements_create-options-hidePostalCode
-var card = elements.create('card', {style: style});
+var card = elements.create('card', {
+    hidePostalCode: true,
+    style: style});
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
