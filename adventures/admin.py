@@ -25,13 +25,13 @@ class AdventureAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'departure_date',
-        'return_date',
+        'start_date',
+        'end_date',
         'slot',
         'image',
     )
 
-    ordering = ('departure_date',)
+    ordering = ('start_date',)
 
 
 admin.site.register(Adventure, AdventureAdmin)

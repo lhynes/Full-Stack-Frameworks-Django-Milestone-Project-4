@@ -25,6 +25,7 @@ var style = {
         iconColor: '#dc3545'
     }
 };
+// https://stripe.com/docs/js/elements_object/create_element?type=card#elements_create-options-hidePostalCode
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 

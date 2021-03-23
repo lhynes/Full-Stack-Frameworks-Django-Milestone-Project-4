@@ -9,6 +9,16 @@ from adventures.models import Adventure
 import json
 import time
 
+"""
+Case A: You need the stripe webhook handler to create the order and orderline items
+Checkout --> User presses Pay --> Checkout post request (let's say you do nothing)
+WebHookHander needs to create the order etc.
+
+Case B:
+Checkout --> User presses Pay --> Checkout post request and create order and order line items
+WebHookHandler simply send an email (example)
+"""
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 

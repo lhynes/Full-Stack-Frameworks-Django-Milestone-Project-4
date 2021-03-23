@@ -12,14 +12,11 @@ def all_adventures(request):
     adventures = Adventure.objects.all()
     query = None
     categories = None
-    
-    
-
+ 
     if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            adventures = adventures.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
+        categories = request.GET['category'].split(',')
+        adventures = adventures.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'q' in request.GET:
@@ -28,9 +25,8 @@ def all_adventures(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('adventures'))
            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(adventure_location__location_name__icontains=query)
             adventures = adventures.filter(queries)
-
 
     context = {
         'adventures': adventures,

@@ -41,8 +41,8 @@ class Adventure(models.Model):
     description = models.TextField(max_length=600)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     duration = models.IntegerField(null=True, blank=True)
-    departure_date = models.DateField(null=True, blank=True)
-    return_date = models.DateField(null=True, blank=True)
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
     slot = models.IntegerField(null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -53,3 +53,7 @@ class Adventure(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_number_bought_since_date(self, date_from):
+        Sum = None
+        print(OrderLineItem.objects.filter(Q(adventure_id=self.id) & Q(created_at__greater_than=date_from)).aggregate(Sum('quantity')))
