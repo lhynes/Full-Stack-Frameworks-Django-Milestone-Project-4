@@ -47,15 +47,22 @@
                         Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        {% if user.is_authenticated %}
-                        <a class="dropdown-item" href="">Profile</a>
-                        <a class="dropdown-item" href="">Bookings</a>
-                        <a class="dropdown-item" href="">Log out</a>
-                        {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Adventure Management</a>
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
                     </div>
+
+
+
+
+
                 </li>
                 <!--<li class="nav-item">
                     <a class="nav-link" href="">
