@@ -56,9 +56,9 @@ def add_adventure_package(request):
     if request.method == 'POST':
         form = AdventurePackageForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            adventure = form.save()
             messages.success(request, 'Successfully added adventure package!')
-            return redirect(reverse('add_adventure_package'))
+            return redirect(reverse('adventure_detail', args=[adventure.id]))
         else:
             messages.error(request, 'Failed to add adventure package. Please ensure the form is valid.')
     else:
@@ -94,3 +94,11 @@ def edit_adventure_package(request, adventure_id):
     }
 
     return render(request, template, context)
+
+
+def delete_adventure_package(request, adventure_id):
+    """ Delete a adventure from the store """
+    adventure = get_object_or_404(Adventure, pk=adventure_id)
+    adventure.delete()
+    messages.success(request, 'Adventure package deleted!')
+    return redirect(reverse('adventures'))
