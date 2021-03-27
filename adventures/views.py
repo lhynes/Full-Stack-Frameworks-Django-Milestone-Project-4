@@ -52,8 +52,18 @@ def adventure_detail(request, adventure_id):
 
 
 def add_adventure_package(request):
-    """ Add a product to the store """
-    form = AdventurePackageForm()
+    """ Add an adventure to the site """
+    if request.method == 'POST':
+        form = AdventurePackageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added adventure package!')
+            return redirect(reverse('add_adventure_package'))
+        else:
+            messages.error(request, 'Failed to add adventure package. Please ensure the form is valid.')
+    else:
+        form = AdventurePackageForm()
+    
     template = 'adventures/add_adventure_package.html'
     context = {
         'form': form,
