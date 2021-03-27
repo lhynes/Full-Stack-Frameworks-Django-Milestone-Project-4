@@ -16,6 +16,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -126,11 +127,15 @@ WSGI_APPLICATION = 'em_travel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.parse('postgres://uinkyyztdnbnuq:5fac26e3360825200bc2c6b38bb5ec2ce6149202a802de5e2ad77561bd6c9afe@ec2-54-74-14-109.eu-west-1.compute.amazonaws.com:5432/d55kdfc57c44jj')
 }
 
 
