@@ -2,7 +2,7 @@ from django import forms
 from .models import Adventure, Category
 
 
-class AdventureForm(forms.ModelForm):
+class AdventurePackageForm(forms.ModelForm):
 
     class Meta:
         model = Adventure

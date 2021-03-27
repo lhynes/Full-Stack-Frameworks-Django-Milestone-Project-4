@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q  # Used to generate a search query 
+from django.db.models.functions import Lower
+
 from .models import Adventure, Category
+from .forms import AdventurePackageForm
 
 
 # Create your views here.
@@ -46,3 +49,14 @@ def adventure_detail(request, adventure_id):
     }
 
     return render(request, 'adventures/adventure_detail.html', context)
+
+
+def add_adventure_package(request):
+    """ Add a product to the store """
+    form = AdventurePackageForm()
+    template = 'adventures/add_adventure_package.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
