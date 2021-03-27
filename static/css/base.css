@@ -33,6 +33,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .container.bag-containter {
     max-width: 80%;
 }
@@ -191,6 +195,7 @@ a.category-badge > span.badge:hover {
 .bg-black {
     background: #000 !important;
 }
+
 
 .overlay {
 	height: 100%;
