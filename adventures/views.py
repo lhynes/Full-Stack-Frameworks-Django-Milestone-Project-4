@@ -70,3 +70,27 @@ def add_adventure_package(request):
     }
 
     return render(request, template, context)
+
+
+def edit_adventure_package(request, adventure_id):
+    """ Edit an adventure on the site """
+    adventure = get_object_or_404(Adventure, pk=adventure_id)
+    if request.method == 'POST':
+        form = AdventurePackageForm(request.POST, request.FILES, instance=adventure)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated adventure!')
+            return redirect(reverse('adventure_detail', args=[adventure.id]))
+        else:
+            messages.error(request, 'Failed to update adventure. Please ensure the form is valid.')
+    else:
+        form = AdventurePackageForm(instance=adventure)
+        messages.info(request, f'You are editing {adventure.name}')
+
+    template = 'adventures/edit_adventure_package.html'
+    context = {
+        'form': form,
+        'adventure': adventure,
+    }
+
+    return render(request, template, context)
