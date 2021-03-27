@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
-    'bag',
+    'blog',
 
     # Other
     'crispy_forms',
@@ -128,16 +128,16 @@ WSGI_APPLICATION = 'em_travel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://uinkyyztdnbnuq:5fac26e3360825200bc2c6b38bb5ec2ce6149202a802de5e2ad77561bd6c9afe@ec2-54-74-14-109.eu-west-1.compute.amazonaws.com:5432/d55kdfc57c44jj')
-}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+ }
+
+# DATABASES = {
+  #  'default': dj_database_url.parse('postgres://uinkyyztdnbnuq:5fac26e3360825200bc2c6b38bb5ec2ce6149202a802de5e2ad77561bd6c9afe@ec2-54-74-14-109.eu-west-1.compute.amazonaws.com:5432/d55kdfc57c44jj')
+#}
 
 
 # Password validation
