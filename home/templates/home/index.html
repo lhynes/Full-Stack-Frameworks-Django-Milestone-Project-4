@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% load static %}
 
 {% block page_header %}
@@ -12,6 +13,80 @@
 {% endblock %}
 
 {% block content %}
+    <section class="page-section" id="testimonial">
+    <div class="row bg-light skew1">
+        <!-- Testimonials -->
+        <!-- https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 -->
+        <!-- https://startbootstrap.com/previews/agency -->
+        <div id="testimonial skew2" class="testimonial skew2 container-fluid">
+                <section class="team-section text-center">
+                    <h1 class="font-weight-bold testimonials text-dark">Latest Adventure Reviews</h1>
+                    <div class="row text-center">
+                        <!-- Testimonial 1-->
+                        <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="testimonial">
+                                <div class="avatar mx-auto">
+                                    <img src="{% static 'images/person1.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member2g">
+                                </div>
+                                <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
+                                <p class="font-weight-normal dark-grey-text">
+                                    <i class="fa fa-quote-left pr-2"></i>Tour Project was a life changing for me. I had the opportunity to visit different places in Thailand and meet one of the harm and best people I ever seen.</p>
+                                <div class="orange-text">
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fas fa-star-half-alt"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Testimonial 1-->
+                        <!-- Testimonial 2-->
+                        <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="testimonial">
+                                <div class="avatar mx-auto">
+                                    <img src="{% static 'images/person2.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="trainer">
+                                </div>
+
+                                <h4 class="font-weight-bold dark-grey-text mt-4">Larry Parker</h4>
+                                <!-- <h6 class="font-weight-bold blue-text my-3">Personal Trainer</h6> -->
+                                <p class="font-weight-normal dark-grey-text">
+                                    <i class="fa fa-quote-left pr-2"></i>Last year I went to Mexico and it was without any doubt the best place I ever visited. From yoga classes to spars and the food, everything were beyond I thought in terms of experince.</p>
+                                <div class="orange-text">
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Testimonial 2-->
+                        <!-- Testimonial 3-->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="testimonial">
+                                <div class="avatar mx-auto">
+                                    <img src="{% static 'images/person3.jpg' %}" class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member">
+                                </div>
+                                <h4 class="font-weight-bold dark-grey-text mt-4">Kay Garland</h4>
+                                <p class="font-weight-normal dark-grey-text">
+                                    <i class="fa fa-quote-left pr-2"></i>You will be delighted by doing one of the Tour Project retreats. At the begin of 2019 I traveled to Rio de Janeiro in Brazil and did kite-surfing classes too. I loved it!</p>
+                                <div class="orange-text">
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                    <i class="fa fa-star"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Testimonial 3-->
+                    </div>
+                </section>
+            </div>
+        <!--/ Testinonials -->
+    </div>
+    </section>
     
          <!-- Contact-->
         <section class="page-section" id="contact">
