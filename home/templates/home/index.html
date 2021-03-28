@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% load static %}
 
 {% block page_header %}
@@ -13,6 +12,27 @@
 {% endblock %}
 
 {% block content %}
+    <section class="page-section">
+            <div class="container">
+            <h1 class=" text-center font-weight-bold text-dark">Top Adventures</h1>
+            <h3 class="card-title ">{{adventure.name}}</h3>
+                <div class="row" >
+                    {% for adventure in show_adventures|slice:"4" %}
+                    <div data-aos="fade-up" id="this{{adventure.adventure_id}}" class="col-lg-4 col-sm-6 portfolio-item aos-init aos-animate">
+                        <a class="card-title" href="{% url 'adventure_details' id=adventure.adventure_id %}">
+                            <div class="card text-white">
+                                <img src="{{ adventure.image.url}}" class="card-img-top" alt="adventure">
+                                    <div class="card-img-overlay shadow text-center">
+                                        <h3 class="card-title ">{{adventure.name}}</h3>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
     <section class="page-section" id="testimonial">
     <div class="row bg-light skew1">
         <!-- Testimonials -->

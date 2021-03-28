@@ -10,6 +10,7 @@ from .forms import AdventurePackageForm
 
 # Create your views here.
 
+
 def all_adventures(request):
     """ A view to return the adventures listview page, includeing sorting and searching """
 
