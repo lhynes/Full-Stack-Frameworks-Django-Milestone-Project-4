@@ -34,12 +34,23 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: #fff;
 }
 
 .container.bag-containter {
     max-width: 80%;
 }
+
+/*  -------------------------------------- search */
+
+.search-form {
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #fff;
+}
+
 
 /*  -------------------------------------- navbar */
 
