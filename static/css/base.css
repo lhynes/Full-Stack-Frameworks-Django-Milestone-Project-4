@@ -9,6 +9,30 @@ body {
     font-family: 'Lato';
 }
 
+a {
+    color: #B7A986;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #B7A986;
+    border-color: #B7A986;
+}
+
+.btn-primary:hover {
+    color: #B7A986;
+    background-color: #fff;
+    border-color: #B7A986;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #B7A986;
+    border-color: #B7A986;
+}
+
 /*  -------------------------------------- home.html */
 
 
@@ -154,7 +178,21 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
+.text-primary {
+    color: #B7A986 !important;
+}
 
+.contact-section .card hr {
+    border-color: #B7A986;
+    border-width: 0.25rem;
+    width: 3rem !important;
+}
+.my-4 {
+    margin-bottom: 1.5rem!important;
+    border-color: #B7A986;
+    border-width: 0.25rem;
+    width: 3rem;
+}
 
 /*  -------------------------------------- adventures.html */
 
@@ -396,8 +434,10 @@ input[name='q']::placeholder {
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+    border-bottom-color: #B7A986 !important;
 }
+
+
 
 .arrow-secondary {
     border-bottom-color: #6c757d !important;
