@@ -591,6 +591,25 @@ input[name='q']::placeholder {
         background-size: cover;
 
     }
+    .contact-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/contact-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .about-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .blog-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/header-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
     .container {
     max-width: 100%;
   }
