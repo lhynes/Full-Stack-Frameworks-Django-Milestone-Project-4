@@ -491,8 +491,9 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 200px;
-        background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
         background-size: cover;
 
     }
@@ -506,10 +507,14 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
-        background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
         background-size: cover;
+        padding-top: 10rem;
     }
+
+    
 
     body {
         height: calc(100vh - 116px);
