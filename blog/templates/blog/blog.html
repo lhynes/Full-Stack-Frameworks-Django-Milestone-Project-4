@@ -5,7 +5,7 @@
     <div class="container blog-header-container">
         <div class="row">
             <div class="col">
-                {% include 'includes/headers/blog-header.html' %}
+                {% include 'includes/main-header.html' %}
             </div>
         </div>
     </div> 
@@ -13,37 +13,77 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Adventure Blog</h2>
-                <hr>
+        <div class="container mb-2">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                    <h2 class="logo-font mb-4">Adventure Blog</h2>
+                    <hr>
+                </div>
             </div>
+        <!-- Jumbotron -->
         </div>
-    <!-- Jumbotron -->
-    <div class="jumbotron-container blog-jumbotron-section">
-    <div class="row">
-        <div class="col-12">
-        <div class="jumbotron blog-jumbotron-content text-center">
-            <h1 class="display-4">Blog</h1>
-        </div>
-        </div>
-    </div>
-    </div>
+
 
     <!-- Blog Intro Text -->
     <div class="container">
-    <div class="row blog-text-row">
-        <div class="col-12">
-        <p>
-            Adventures<br />
-            Check out our blog for all the latest news from our Explore More travel enthusiasts.
-        </p>
+        <div class="row blog-text-row">
+            <div class="col-12">
+            <p>
+                Adventures<br />
+                Check out our blog for all the latest news from our Explore More travel enthusiasts.
+            </p>
+            </div>
         </div>
     </div>
+
+    <!-- card -->
+
+
+      <!-- /.row -->
+    <div class="blog-container">
+        <div class="row">
+        <!-- Blog Entries Column -->
+            <div class="col">
+                {% for post in post_list %}
+                <div class="card flex-row flex-wrap border-1 shadow p-3 mb-5 bg-white rounded">
+                    <div class="card-header border-0">
+                        <a href="{% url 'blog_post_detail' post.slug  %}">
+                        {% if post.image %}
+                        <img
+                            class="card-img-top mb-3"
+                            src="{{ post.image.url }}"
+                            alt="{{ post.title }}"
+                        />
+                        {% else %}
+                        <img
+                            class="card-img-top mb-3"
+                            src="{{ MEDIA_URL }}noimage.png"
+                            alt="{{ post.title }}"
+                        />
+                        {% endif %}
+                        </a>
+                    </div>
+                    <div class="card-block px-2">
+                        <a href="{% url 'blog_post_detail' post.slug  %}">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        </a>
+                        <p class="card-text text-muted h6">
+                            {{ post.author }} | {{ post.created_on}}
+                        </p>
+                        <p class="card-text">{{ post.content|safe|slice:":100" }}...
+                        </p>
+                        <a href="{% url 'blog_post_detail' post.slug  %}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
+
+
+    <!-- Origional card laytout -->
     <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -74,7 +114,7 @@
             </p>
             <p class="card-text">{{ post.content|safe|slice:":100" }}...
             </p>
-            <a href="{% url 'blog_post_detail' post.slug  %}" class="btn btn-yellow">Read More
+            <a href="{% url 'blog_post_detail' post.slug  %}" class="btn btn-primary">Read More
             </a>
             </div>
         </div>
@@ -82,6 +122,7 @@
         </div>
     </div>
     </div>
+    <!-- end of layout -->
 
         <!-- Pagination -->
         <div>

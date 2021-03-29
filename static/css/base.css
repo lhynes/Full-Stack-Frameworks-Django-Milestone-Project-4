@@ -236,6 +236,14 @@ input[name='q']::placeholder {
     border-bottom: 1px solid #fff;
 }
 
+/*  -------------------------------------- blog */
+
+.card.flex-row.flex-wrap {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 /*  -------------------------------------- navbar */
 
