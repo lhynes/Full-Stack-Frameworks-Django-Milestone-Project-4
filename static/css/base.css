@@ -653,13 +653,8 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Footer */
 
+footer.page-footer.font-small.footer-color.pt-4 {
+    background-color: #b7a986;
+    color: white !important;
+}
 
-/* footer.page-footer.font-small.footer-color.pt-4 {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: white;
-
-}*/
