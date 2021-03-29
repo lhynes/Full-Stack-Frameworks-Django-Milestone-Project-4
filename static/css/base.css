@@ -54,6 +54,10 @@ a {
     width: 100%;
     border: 0;
 }
+/*  -------------------------------------- home.html */
+body#page-top {
+    height: 90%;
+}
 
 /* -------------------------------Home - testimonial      */
 .img-fluid.alter_img {
@@ -87,7 +91,7 @@ p.dark-grey-text.w-responsive.mx-auto.mb-5.subtitle {
   transform: skewY(-4deg);
   z-index: -2;
   margin-top: 100px;
-  background-image: linear-gradient(-225deg, #FFFEFF 0%, #fbce5f 100%);
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #6b47b3 100%);
 }
 
 .testimonial.skew2.container-fluid {
@@ -203,6 +207,11 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+.adventurehr {
+    border-color: #B7A986;
+    border-width: 0.25rem;
+    width: 50rem !important;
+}
 /*  -------------------------------------- bag.html */
 .btt-button {
     height: 42px;
@@ -242,6 +251,42 @@ input[name='q']::placeholder {
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.blog-container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.container.blog-intro {
+    text-align: center;
+    vertical-align: middle !important;
+    color: white;
+    background-color: #b7a981;
+    height: 5em;
+    padding-top: 1.2rem;
+}
+/*  -------------------------------------- about */
+
+.projects-section {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.project-text.w-100.my-auto.text-center.text-lg-left {
+    padding: 5rem;
+}
+
+.projects-section .project-text hr {
+    border-color: #b7a981;
+    border-width: 0.25rem;
+    width: 30%;
+}
+
+/*  -------------------------------------- contact */
+.submit-button {
+    text-align: center;
 }
 
 
@@ -595,27 +640,33 @@ input[name='q']::placeholder {
 
     .header-container {
         padding-top: 10rem;
-        padding-bottom: calc(10rem - 4.5rem);
+        padding-bottom: calc(15rem - 4.5rem);
         background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
         background-size: cover;
 
     }
     .contact-header-container {
         padding-top: 10rem;
-        padding-bottom: calc(10rem - 4.5rem);
+        padding-bottom: calc(15rem - 4.5rem);
         background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/contact-bg.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .about-header-container {
         padding-top: 10rem;
-        padding-bottom: calc(10rem - 4.5rem);
+        padding-bottom: calc(15rem - 4.5rem);
         background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .blog-header-container {
         padding-top: 10rem;
-        padding-bottom: calc(10rem - 4.5rem);
+        padding-bottom: calc(15rem - 4.5rem);
         background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/header-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .adventures-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/adventure.jpg') no-repeat center center fixed;
         background-size: cover;
     }
 

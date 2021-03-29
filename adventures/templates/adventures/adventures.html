@@ -2,109 +2,50 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container adventures-header-container">
         <div class="row">
             <div class="col">
-                {% include 'includes/main-header.html' %}
+                {% include 'includes/headers/adventures-header.html' %}
             </div>
         </div>
     </div> 
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+        <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Adventures</h2>
-                {% for adventure in adventures %}
-                    <a class="category-badge text-decoration-none" href="{% url 'adventures' %}?category={{ adventure.category.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ adventure.category.friendly_name }}</span>
+    <hr><br>
+    {% for adventure in adventures %}
+        <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            {% if adventure.image %}
+                    <a href="{% url 'adventure_detail' adventure.id %}">
+                        <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
                     </a>
-                {% endfor %}
-                <hr class="w-50 mb-1"> <!-- 50% width horizontal rule -->
+                {% else %}
+                    <a href="{% url 'adventure_detail' adventure.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
+                    </a>
+                {% endif %}
             </div>
-        </div>
-        <div class="row">
-            <div class="adventure-container col-10 offset-1">
-                <div class="row mt-1 mb-2"><!-- first row -->
-                    <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
-                            {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'adventures' %}" class="fas fa-chevron-left"> All Adventures</a> | </span>
-                            {% endif %}
-                            {{ adventures|length }} Adventures{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            <div class="col-12 col-md-6 col-lg-4 ">
+                <h3>{{adventure.name}}</h3>
+                <h6>{{adventure.adventure_location}}</h6>
+                    {% if adventure.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'adventures' %}?category={{ adventure.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ adventure.category.friendly_name }}
+                            </a>
                         </p>
-                    </div>
-                </div> 
-                <div class="row">   <!-- second row -->
-                    {% for adventure in adventures %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                            <div class="card h-100 border-0">
-                                {% if adventure.image %}
-                                <a href="{% url 'adventure_detail' adventure.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'adventure_detail' adventure.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="lead mb-0">{{ adventure.name }}</p>
-                                    <p class="mb-0 text-left">{{ adventure.adventure_location }}</p>
-
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="mb-0 text-left font-weight-bold"> ‎€{{ adventure.price }}</p>
-                                            {% if adventure.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'adventures' %}?category={{ adventure.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ adventure.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if adventure.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ adventure.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_adventure_package' adventure.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_adventure_package' adventure.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                       {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                    {% endif %}
+                <p>{{adventure.adventure|safe|slice:":150"}}...</p>
+                <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{adventure.start_date}} - {{adventure.end_date}}</strong></p>
+                <h3>€ {{adventure.price}}</h3>
+                </br>
+                <a class="btn btn-info rounded py-2 btn-block btn-primary" href="{% url 'adventure_detail' adventure.id %}"> View Adventure</a>
             </div>
         </div>
-    </div>
+        <hr class="adventurehr mt-5 mb-5">
+    {% endfor %}
+
 {% endblock %}
