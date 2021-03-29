@@ -5,7 +5,7 @@
     <div class="container about-header-container">
         <div class="row">
             <div class="col">
-                {% include 'includes/headers/about-header.html' %}
+                {% include 'includes/headers/about-us-header.html' %}
             </div>
         </div>
     </div> 
@@ -13,5 +13,76 @@
 
 
 {% block content %}
-<h2 class="logo-font">About us</h2>
+<div class="overlay"></div>
+<div class="container blog-intro mb-5">
+        <div class="row blog-text-row">
+            <div class="col-12">
+            <h2>
+               Learn more about us!
+            </h2>
+            </div>
+        </div>
+    </div>
+<!-- About Section -->
+<!-- https://startbootstrap.com/previews/grayscale -->
+<section class="projects-section pb-5">
+	<div class="container">
+
+		<!-- Presentation -->
+
+            
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+				<div class="col-lg-6">
+					<img class="img-fluid" src="{% static 'images/croatia.jpg' %}" alt="Img croatia">
+            </div>
+					<div class="col-lg-6 order-lg-first">
+						<div class="bg-black text-center h-100 project">
+							<div class="d-flex h-100">
+								<div class="project-text w-100 my-auto text-center text-lg-left">
+									<h4 class="text-white">Our Team</h4>
+									<p class="mb-0 text-white-50">
+									 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet 
+                                        pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi 
+                                        maxime quae totam ducimus consectetur?Lorem ipsum dolor sit amet, consectetur adipisicing 
+                                        elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto 
+                                        reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia v
+                                        oluptas voluptatibus, minus!
+								</p>
+									<hr class="d-none d-lg-block mb-0 ml-0">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Services -->
+				<div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+					<div class="col-lg-6">
+						<img class="img-fluid" src="{% static 'images/iredeshome.jpg' %}" alt="Services Img">
+                    </div>
+						<div class="col-lg-6">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-left">
+										<h4 class="text-white">Services</h4>
+										<ul class="mb-0 text-white-50">
+											<li>Language Support</li>
+											<li>Tailor-made adventure trips</li>
+											<li>Equipment Advice</li>
+											<li>Destination infomation</li>
+										</ul>
+										<hr class="d-none d-lg-block mb-0 ml-0">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Button to trips -->
+					<div class="text-center mt-5">
+						<a href="{% url 'adventures' %}" class="btn btn-primary">Explore Adventures Today</a>
+					</div>
+
+				</div>
+</section>
 {% endblock %}
