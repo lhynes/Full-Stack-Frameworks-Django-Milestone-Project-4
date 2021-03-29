@@ -2,50 +2,69 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container adventures-header-container">
-        <div class="row">
-            <div class="col">
-                {% include 'includes/headers/adventures-header.html' %}
-            </div>
+<div class="container adventures-header-container">
+    <div class="row">
+        <div class="col">
+            {% include 'includes/headers/adventures-header.html' %}
         </div>
-    </div> 
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
-        <div class="overlay"></div>
-    <div class="container-fluid">
-    <hr><br>
-    {% for adventure in adventures %}
-        <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            {% if adventure.image %}
-                    <a href="{% url 'adventure_detail' adventure.id %}">
-                        <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
-                    </a>
-                {% else %}
-                    <a href="{% url 'adventure_detail' adventure.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
-                    </a>
-                {% endif %}
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 ">
-                <h3>{{adventure.name}}</h3>
-                <h6>{{adventure.adventure_location}}</h6>
-                    {% if adventure.category %}
-                        <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'adventures' %}?category={{ adventure.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ adventure.category.friendly_name }}
-                            </a>
-                        </p>
-                    {% endif %}
-                <p>{{adventure.adventure|safe|slice:":150"}}...</p>
-                <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{adventure.start_date}} - {{adventure.end_date}}</strong></p>
-                <h3>€ {{adventure.price}}</h3>
-                </br>
-                <a class="btn btn-info rounded py-2 btn-block btn-primary" href="{% url 'adventure_detail' adventure.id %}"> View Adventure</a>
-            </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Adventures</h2>
+            <a class="category-badge text-decoration-none" href="{% url 'adventures' %}">
+                <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">All</span>
+            </a>
+            {% for adventure in adventures %}
+            <a class="category-badge text-decoration-none"
+                href="{% url 'adventures' %}?category={{ adventure.category.name }}">
+                <span
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ adventure.category.friendly_name }}</span>
+            </a>
+            {% endfor %}
         </div>
-        <hr class="adventurehr mt-5 mb-5">
+    </div>
+    <hr class="w-100 mb-1">
+    <br>
+    {% for adventure in adventures %}
+    <div class="row " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            {% if adventure.image %}
+            <a href="{% url 'adventure_detail' adventure.id %}">
+                <img class="card-img-top img-fluid" src="{{ adventure.image.url }}" alt="{{ adventure.name }}">
+            </a>
+            {% else %}
+            <a href="{% url 'adventure_detail' adventure.id %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ adventure.name }}">
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 ">
+            <a href="{% url 'adventure_detail' adventure.id %}">
+                <h3>{{adventure.name}}</h3>
+            </a>
+            <h6>{{adventure.adventure_location}}</h6>
+            {% if adventure.category %}
+            <p class="small mt-1 mb-0">
+                <a class="text-muted" href="{% url 'adventures' %}?category={{ adventure.category.name }}">
+                    <i class="fas fa-tag mr-1"></i>{{ adventure.category.friendly_name }}
+                </a>
+            </p>
+            {% endif %}
+            <p>{{adventure.adventure|safe|slice:":150"}}...</p>
+            <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{adventure.start_date}} -
+                    {{adventure.end_date}}</strong></p>
+            <h3>€ {{adventure.price}}</h3>
+            </br>
+        </div>
+    </div>
+    <br>
+    <!-- <hr class="adventurehr mt-5 mb-5"> -->
     {% endfor %}
 
-{% endblock %}
+    {% endblock %}
