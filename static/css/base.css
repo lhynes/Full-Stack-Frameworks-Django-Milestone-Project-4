@@ -292,6 +292,11 @@ input[name='q']::placeholder {
 
 /*  -------------------------------------- navbar */
 
+img.nav_logo{
+    width:4rem;
+}
+
+
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar << */
 .navbar {
   transition: all 0.4s;
