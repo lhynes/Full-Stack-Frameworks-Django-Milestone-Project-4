@@ -6,7 +6,7 @@ html {
 body {
     height: calc(100vh - 200px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Roboto', sans-serif;
     font-size:1.2rem;
 }
 
@@ -295,6 +295,12 @@ input[name='q']::placeholder {
 img.nav_logo{
     width:4rem;
 }
+
+img.nav_logo_mobile{
+    width:4rem;
+    display:none;
+}
+
 
 
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar << */
@@ -764,6 +770,16 @@ img.img-fluid.logo {
         background: #fff;
         color: #000;
     }
+
+    img.nav_logo_mobile{
+    display:inline;
+    width: 2rem;
+    }
+
+    img.nav_logo{
+    display:none;
+    }
+
     .container {
     max-width: 100%;
   }
