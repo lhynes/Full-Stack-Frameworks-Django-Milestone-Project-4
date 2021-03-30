@@ -316,7 +316,7 @@ img.nav_logo{
   text-decoration: none;
 }
 
-/* To fix BRAND - FLOWER icon color */
+/* To fix BRAND - color */
 .navbar .navbar-brand {
   color: #fff;
 }
@@ -755,8 +755,7 @@ img.img-fluid.logo {
         background-size: cover;
         padding-top: 10rem;
     }
-
-    
+  
 
     body {
         height: calc(100vh - 116px);
@@ -771,6 +770,7 @@ img.img-fluid.logo {
 
     .navbar .navbar-brand {
         color: #555;
+        background-image:url('/static/images/5.png');
     }
     
     .navbar-light .navbar-nav .nav-link {
