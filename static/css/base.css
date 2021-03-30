@@ -618,6 +618,66 @@ input[name='q']::placeholder {
 }
 
 
+/* --------------------------------- homepage */
+img.img-fluid.logo {
+    width: 50rem;
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("/media/homepage_background_cropped.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.masthead h1 {
+  font-family: 'Varela Round';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.masthead h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masthead h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+
+
+
+
 
 /* -------------------------------- Media Queries */
 
@@ -641,9 +701,12 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        /* background: url('/media/EM_home_logo.png') no-repeat center;*/
+        height: 800px;
         background-size: cover;
-
+        margin-bottom: 4.5rem;
+        height: 90vh;
     }
     .contact-header-container {
         padding-top: 10rem;
@@ -682,7 +745,6 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 10rem;
         padding-bottom: calc(10rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
         background-size: cover;
         padding-top: 10rem;
     }
