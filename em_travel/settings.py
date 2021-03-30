@@ -89,7 +89,8 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth - allows allauth and django to access the HTTP request object in templates.
+                # required by allauth - allows allauth and django to access the HTTP request object in templates.
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -132,18 +133,23 @@ WSGI_APPLICATION = 'em_travel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+DATABASES = {
+        'default': dj_database_url.parse('postgres://uinkyyztdnbnuq:5fac26e3360825200bc2c6b38bb5ec2ce6149202a802de5e2ad77561bd6c9afe@ec2-54-74-14-109.eu-west-1.compute.amazonaws.com:5432/d55kdfc57c44jj')
+}
 
-if 'DATABASE_URL' in os.environ:
-     DATABASES = {
-         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-     DATABASES = {
-         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# 
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 # DATABASES = {
 #     'default': {
@@ -151,8 +157,6 @@ else:
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
-
 
 
 # Password validation
@@ -203,7 +207,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'explore-more-adventures-ms4'
     AWS_S3_REGION_NAME = 'eu-west-1'
