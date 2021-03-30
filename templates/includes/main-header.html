@@ -1,28 +1,41 @@
 {% load static %}
-<header>
+
+<header class="masthead">
+	<div class="container d-flex h-100 align-items-center">
+		<div class="mx-auto text-center">
+			<h1 class="mx-auto my-0 text-uppercase"> </h1>
+                <img class="img-fluid logo" src="{% static 'images/EM_home_logo.png' %}" alt="Img logo">
+			<h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+		</div>
+	</div>
+</header>
+
+
+<!--<header>
     <div class="container h-200">
-            <div class="row h-200">
-                <div class="my-auto mx-auto">
-                    <h1 class="display-4 logo-font text-light">
-                        Start your adventure today 
-                    </h1>
-                    <div class="my-5">
-                                    <div class="col-12 col-lg-12 my-auto py-1 py-lg-0">
-                    <form method="GET" action="{% url 'adventures' %}">
-                        <div class="input-group w-100">
-                            <input class="search-form form-control" type="text" name="q" placeholder="Explore more adventures">
-                            <div class="input-group-append">
-                                <button class="form-control btn text-white rounded-0" type="submit">
-                                    <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </button>
+        <div class="row h-200">
+            <div class="my-auto mx-auto">
+                <h1 class="display-4 logo-font text-light">
+                    
+                </h1>
+            <div class="my-5">
+                    <div class="col-12 col-lg-12 my-auto py-1 py-lg-0">
+                        <form method="GET" action="{% url 'adventures' %}">
+                            <div class="input-group w-100">
+                                <input class="search-form form-control" type="text" name="q"
+                                    placeholder="Explore more adventures">
+                                <div class="input-group-append">
+                                    <button class="form-control btn text-white rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
-</header>
+    </div>
+</header> -->
