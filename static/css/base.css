@@ -308,6 +308,7 @@ img.nav_logo_mobile{
 
 
 
+
 /* Bootstrapious bellow https://bootstrapious.com/p/transparent-navbar << */
 .navbar {
   transition: all 0.4s;
@@ -319,6 +320,17 @@ img.nav_logo_mobile{
 
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+li.nav-item:hover {
+    background-color: #ced4da4d;
+}
+li.nav-item:hover {
+    background-color: #ced4da4d;
 }
 
 .navbar .nav-link:hover,
