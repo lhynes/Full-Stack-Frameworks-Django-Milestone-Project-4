@@ -144,55 +144,41 @@ A site owner or admin wants to:
 
 
 ## Design Choices
-### Theme
 
-I wanted to create a website that would "bring" the user to CHANGE. I wanted to keep it classy and professional as well. I have tried to put some efforts on selecting visually impacting pictures. 
-I have used a free bootstrap theme called [Grayscale](https://startbootstrap.com/themes/grayscale/). I found it absolutely wonderful and I tried my best to stick to the theme while building my website.
-The overall feel of the site is one that is visually appealing and simple to follow. The following design choices were made with this in mind:
+The goal with the look and feel of the site was to have a design that was simple, clean and engangeing. 
+Where tuhe imagery of the adventures jumped out to the visitor. 
+I reviewed some bootstrsp themes for inspiration 
+- [Agency](https://startbootstrap.com/previews/agency)
+- [Clean Blog](https://startbootstrap.com/previews/clean-blog)
+- [Grayscale](https://startbootstrap.com/themes/grayscale/). I found it absolutely wonderful and I tried my best to stick to the theme while building my website.
+The following design choices were made with this in mind:
 
 **Fonts**
 
 - The primary font **Roboto** was chosen because it is a crisp, sharp and easy to read font. It was inspired by the logo created on [Canva.com](https://www.canva.com/design/DAEZS9oLjqo/ORIPu67YhJCYB8cCxHwt_Q/view?utm_campaign=designshare&utm_source=sharebutton) 
-### Typography
-
-- The primary font family is [Nunito](https://fonts.google.com/specimen/Nunito) from Google Fonts.
-- The second font family - used mainly for headers - is [Varela Round](https://fonts.google.com/specimen/Varela+Round?selection.family=Varela+Round&sidebar.open) also from Google Fonts.
 
 
 **Colours**
 
-- The primary colour choices for this site is purple and blue.  This has been inspired by the county colours of Galway and also the blue as an uplifting balance. 
-A basic pallet was chosen to ensure the infomration on the page was the main focus.
-### Colors
-
-The three main colors were used throughout this project.
-
-1. White - `#fff`
-    - Background
-    - Navbar
-2. Black - `#161616`
-    - background
-3. Green - `#64a19d`
-    - Buttons
-    - Links
-    - Some icones
+- The primary colour choices for this site is navy and tourqupise. Inspired but the sea and also my brothers old scounts uniform of blue and navy. 
 
 
 **Styling**
 
-- On the listing page cards have a minimalist design and rounded edges and a drop shadow to highlight these areas on the page more.  
+- On the listing page cards have a minimalist design
 - Design and styting consistency was important on this site to help linking and combining the related areas together. 
 
 
-**Home Tile Images**
+**Adventure Tile Images**
 
-- At present these have been kept simple and will be considered again int the future. 
+- At present these have been kept simple and their layout will be considered again in the future. 
 
 
 **Header and home Banner images**
 
 - A strong header was chosen to make the logo and heading memorable 
-- The homepage image was chosen for its friendliness and warmness of complimentry colour palette. 
+- The homepage image was chosen to envoke a sense of the wild. 
+
 
 
 
@@ -200,25 +186,7 @@ The three main colors were used throughout this project.
 
 During the early part of the project wireframes were created using pen and paper and on [Pages](https://www.apple.com/pages/). 
 
-- [Link](https://drive.google.com/drive/folders/14ucGfk0wU4zXHGPPJoB9GMs4_lIcOa28?usp=sharing)
-
-## Wireframes
-
-I have used Balsamiq to create my wireframes. I first brainstormed on the structure and then created the site map. There are some differences with the final project as these wireframes were created during the preparation phase. 
-
-- [Site map](https://i.ibb.co/3kRsBpC/Site-map.png)
-- [Home](https://i.ibb.co/wJV0cz1/Home.png)
-- [About](https://i.ibb.co/nkDJLLv/About.png)
-- [Contact](https://i.ibb.co/r0NdrSH/Contact.png)
-- [Faqs](https://i.ibb.co/8XQKgk7/FAQs.png)
-- [Trips](https://i.ibb.co/0FN5kv8/Trips.png)
-- [Listing](https://i.ibb.co/jbJDKtx/Listings.png)
-- [Cart](https://i.ibb.co/wCrWvJQ/Checkout-Booking-confirmation.png)
-- [Checkout 1](https://i.ibb.co/hsKMCm0/Checkout-Info.png)
-- [Checkout 2](https://i.ibb.co/55gyb6m/Checkout-Payment.png)
-- [Checkout 3](https://i.ibb.co/ZKWpnMb/Checkout-Confirmation.png)
-- [Profile](https://i.ibb.co/DkWgrjC/Account.png)
-
+- [Link](https://drive.google.com/drive/folders/1E-GPI5uT55XETPIjipmbFOIiUjZFPJ0j?usp=sharing)
 
 
 # Features
@@ -228,37 +196,40 @@ I have used Balsamiq to create my wireframes. I first brainstormed on the struct
 
 ###### Features on every page
 - Fixed navigation bar with:
-    - on the left: the logo
-    - in the middle: links to the different pages (home, trips, scientists, about, contact)
-    - on the right: links for account pages and cart
-- Footer with the address of the company, a subscription button and links to other pages of the website (trips, scientists, FAQ)
+    - the logo on the left 
+    - centered in the middle links to the different pages
+    - links for account pages and cart planced on the rights
+- Footer with the name of the company and representative social media links
 
 ###### Feature 1 - Home page
 Home page with:
-- innovative concept of the travel company
-- categories of trips (individuals & scientists)
-- statistics on our trips
-- testimonials of passengers
-- button to browse trips
+- Insights to Explore more 
+    - Top adventures available to cusotmerts
+    - reviews from customers
+    - Feature story
+    - contact information for the main office
+
 
 ###### Feature 2 - About page
-Synthetic page with information about the company.
+- A simple page with information about the company.
 
 ###### Feature 3 - Contact page
-Page with contact form and the google map location of the company.
+- A simple page with contact form and the google map location of the company.
 
-###### Feature 4 - Scientists page
-Page with information for scientists and businesses that would like to organize scientific research trips. The page provides information on the selection process. There is a button to get redirected to the contact page. 
+###### Feature 4 - Blog page
+- List page overview of all adventure blogs
+- Detail page for each blog and option for visitor to leave a comment
 
-###### Feature 5 - Trips by destination page
-Presentation of all the destinations available. For each destination, the following information is provided:
-- trip duration (in days)
-- trip distance (in km)
-- trip price (in euros)
-- departures
-- button to access the trip details
 
-###### Feature 6 - Trips details
+###### Feature 5 - Adventures Page
+Presentation of all the adventures available. 
+For each package, the following information is provided:
+- The dates of the adventure
+- the cost 
+- the activity category
+- CTA button to access the aadventure details
+
+###### Feature 6 - Adventure details
 Description page for a specific destination. The page should display:
 - 4 high-quality pictures of the destination
 - trip information (duration, distance, price)
@@ -294,31 +265,31 @@ Checkout process step by step with the following pages:
 - contact details form
 - forms to register passengers
 - payment form
-- confirmation of order booked
+- confirmation of order booked4
 - for each step of the checkout process, a recap of the cart is available as well as a return button to get back to the previous step. 
 
 ###### Feature 10 - FAQs page
 Page with all the most frequently asked questions about our trips.
 
-###### Feature 11 - Sign up page
+###### Feature 10 - Sign up page
 Sign up form to register to an account.
 
-###### Feature 12 - Login page
+###### Feature 11 - Login page
 Form to log in to your account.
 
-###### Feature 13 - Password reset page
+###### Feature 12 - Password reset page
 Option to reset password by email in case users forgot it.
 
-###### Feature 14 - Profile page
+###### Feature 13 - Profile page
 Profile page for users with an account that should display their:
 - passenger details
 - contact details
 - option to change their password
 
-###### Feature 15 - Bookings page
+###### Feature 14 - Order Summary page
 Page with all upcoming and/or past trips that were booked by the user.
 
-###### Feature 16 - Log out 
+###### Feature 16 - Log out confirmation
 
 
 
