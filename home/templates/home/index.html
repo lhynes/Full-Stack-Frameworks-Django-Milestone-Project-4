@@ -34,7 +34,6 @@
     <div class="blog-container">
         <h1 class=" text-center font-weight-bold text-light">Top Adventures</h1>
         <br>
-        <h3 class="card-title topAd">{{adventure.name}}</h3>
         <div class="row">
             {% for adventure in show_adventures|slice:"4" %}
             <div data-aos="fade-up" id="this{{ adventure.id }}"
@@ -43,7 +42,7 @@
                     <div class="card text-light">
                         <img src="{{ adventure.image.url}}" class="card-img-top" alt="adventure">
                         <div class="card-img-overlay shadow text-center">
-                            <h3 class="card-title ">{{adventure.name}}</h3>
+                            <h3 class="card-title topAd ">{{adventure.name}}</h3>
                         </div>
                     </div>
                 </a>
