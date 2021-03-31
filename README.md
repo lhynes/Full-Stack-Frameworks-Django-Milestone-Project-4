@@ -51,6 +51,7 @@ and allow users to create their own custom adventure packages.
 6. [Deployment](#deployment)
     - [Heroku Deployment](#depl-heroku)
     - [Local Deployment (GitPod)](#depl-gitpod)
+    - [Bugs](#bugs)
 
 7. [Credits](#credits)
     - [Content](#content)
@@ -493,7 +494,7 @@ STRIPE_SECRET | `<STRIPE_SECRET>`
     - In the workCHANGE run the following command `Python3 manage.py runserver`.
     - You should now have a gitpod link to the deployed app. 
 
-# Bugs
+## Bugs
 
 ### DB & Images
 In the final two days before submission I had a issue with my Postgress DB which resulted in a full reset of the DB. 
