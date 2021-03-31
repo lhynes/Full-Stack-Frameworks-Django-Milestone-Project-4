@@ -18,13 +18,13 @@
         <div class="col text-center mt-3">
             <h2 class="logo-font">Adventures</h2>
             <a class="category-badge text-decoration-none" href="{% url 'adventures' %}">
-                <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">All</span>
+                <span class="p-2 mt-2 badge badge-white text-black  border border-dark">All</span>
             </a>
             {% for adventure in adventures %}
             <a class="category-badge text-decoration-none"
                 href="{% url 'adventures' %}?category={{ adventure.category.name }}">
                 <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ adventure.category.friendly_name }}</span>
+                    class="p-2 mt-2 badge badge-white text-black  border border-dark">{{ adventure.category.friendly_name }}</span>
             </a>
             {% endfor %}
         </div>
@@ -59,7 +59,7 @@
             <p>{{adventure.adventure|safe|slice:":150"}}...</p>
             <p class="text-secondary"><i class="text-info far fa-calendar-check"></i> <strong>{{adventure.start_date}} -
                     {{adventure.end_date}}</strong></p>
-            <h3>€ {{adventure.price}}</h3>
+            <h3>$ {{adventure.price}}</h3>
             </br>
         </div>
     </div>

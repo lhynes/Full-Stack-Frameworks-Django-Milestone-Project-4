@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
 html {
     height: 100%;
 }
@@ -11,7 +13,7 @@ body {
 }
 
 a {
-    color: #B7A986;
+    color: #092848;
     text-decoration: none;
     background-color: transparent;
 }
@@ -23,21 +25,140 @@ a {
 
 .btn-primary {
     color: #fff;
-    background-color: #B7A986;
-    border-color: #B7A986;
+    background-color: #092848;
+    border-color: #092848;
 }
 
 .btn-primary:hover {
-    color: #B7A986;
+    color: #092848;
     background-color: #fff;
-    border-color: #B7A986;
+    border-color: #092848;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #B7A986;
-    border-color: #B7A986;
+    background-color: #092848;
+    border-color: #092848;
 }
+
+
+
+/*-----------------------------------Special paddings/margins/text - General CSS area used more than once through out the site */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    color: #525252;
+    font-family: "Roboto", sans-seriif;
+}
+
+.h1 {
+    font-size: 2.5rem;
+}
+
+h3.card-title.topAd {
+    color: #fff;
+}
+.marginAuto {
+    margin: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: -0px;
+}
+
+.destinationMessage {
+        max-width: 50%;
+        margin:auto;
+    }
+
+
+/*-----------------------------------Home page HeroHeading */
+
+.hero-title {
+    font-family: "Roboto", sans-seriif;
+    font-weight: 300;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-family: "Roboto", sans-seriif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #ffffff;
+}
+
+/*Styling for top adventuer section*/
+
+
+
+section#topadventure {
+  background-color: #092848;
+  background-image: url('/media/map-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/*Styling for the travel story section*/
+
+.story-author h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+    color: #fafafa;
+}
+
+.story-author p {
+    margin-top: 0;
+    color: #fafafa;
+}
+
+.story-author img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.bg-story {
+    background: rgb(29, 149, 166);
+    background: -moz-linear-gradient(90deg, rgba(29, 149, 166, 1) 0%, rgba(21, 170, 191, 1) 51%, rgba(29, 176, 196, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(29, 149, 166, 1) 0%, rgba(21, 170, 191, 1) 51%, rgba(29, 176, 196, 1) 100%);
+    background: linear-gradient(90deg, rgba(29, 149, 166, 1) 0%, rgba(21, 170, 191, 1) 51%, rgba(29, 176, 196, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d95a6", endColorstr="#1db0c4", GradientType=1);
+}
+
+
 
 /*  -------------------------------------- home.html */
 
@@ -136,7 +257,7 @@ textarea.form-control {
   color: #e9ecef!important;
 }
 section#contact {
-  background-color: #845f03;
+  background-color: #092848;
   background-image: url('/media/map-image.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -190,21 +311,73 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .text-primary {
-    color: #B7A986 !important;
+    color: #092848 !important;
 }
 
 .contact-section .card hr {
-    border-color: #B7A986;
+    border-color: #092848;
     border-width: 0.25rem;
     width: 3rem !important;
 }
 .my-4 {
     margin-bottom: 1.5rem!important;
-    border-color: #B7A986;
+    border-color: #092848;
     border-width: 0.25rem;
     width: 3rem;
 }
 
+
+
+
+/*  -------------------------------------- REVIEW section home.html */
+.page-section {
+  padding: 6rem 0;
+}
+.page-section h2.section-heading {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #092848;
+}
+.page-section h3.section-subheading {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+  color: #092848 !important;
+
+}
+section#review {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+section#review .section-heading {
+  color: #092848;
+}
+
+section#story .section-heading {
+  color: #092848;
+}
+
+
+
+.text-primary {
+    color: #092848 !important;
+}
+
+.review-section .card hr {
+    border-color: #092848;
+    border-width: 0.25rem;
+    width: 3rem !important;
+}
+.my-4 {
+    margin-bottom: 1.5rem!important;
+    border-color: #092848;
+    border-width: 0.25rem;
+    width: 3rem;
+}
 /*  -------------------------------------- adventures.html */
 
 a.category-badge > span.badge:hover {
@@ -213,7 +386,7 @@ a.category-badge > span.badge:hover {
 }
 
 .adventurehr {
-    border-color: #B7A986;
+    border-color: #092848;
     border-width: 0.25rem;
     width: 50rem !important;
 }
@@ -386,8 +559,8 @@ li.nav-item:hover {
 }
 
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, .5);
-  border-color: rgba(0, 0, 0, .1);
+  color: #092848;
+  border-color: #092848;
 }
 
 .padding.px-4.px-lg-0.bg-light {
@@ -404,7 +577,7 @@ li.nav-item:hover {
 
 
 .cart-text-info {
-    color: black !important;
+    color: #092848 !important;
     border-radius: 25px;
     background-color: white;
 }
@@ -428,26 +601,26 @@ li.nav-item:hover {
 }
 
 .shop-now-button {
-    background: black;
+    background: #092848;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #092848;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #092848 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #092848;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #092848;
     color: white !important;
 }
 
@@ -466,11 +639,15 @@ li.nav-item:hover {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #092848 !important;
 }
 
 .bg-black {
     background: #000 !important;
+}
+
+.bg-navy {
+    background: #092848 !important;
 }
 
 
@@ -517,7 +694,7 @@ li.nav-item:hover {
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #B7A986 !important;
+    border-bottom-color: #092848 !important;
 }
 
 
@@ -753,15 +930,17 @@ img.img-fluid.logo {
     .blog-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/header-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/blog_detail.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .adventures-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/adventure.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/travelhero.jpg') no-repeat center center fixed;
         background-size: cover;
     }
+    
+
 
     .container {
     max-width: 100%;
@@ -777,6 +956,19 @@ img.img-fluid.logo {
         padding-bottom: calc(10rem - 4.5rem);
         background-size: cover;
         padding-top: 10rem;
+    }
+
+      .blog-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/header-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+
+
+    h3.card-title.topAd {
+    color: white;
     }
   
 
@@ -815,7 +1007,7 @@ img.img-fluid.logo {
 /* -------------------------------- Footer */
 
 footer.page-footer.font-small.footer-color.pt-4 {
-    background-color: #b7a986;
+    background-color: #092848;
     color: white !important;
 }
 

@@ -12,17 +12,35 @@
 {% endblock %}
 
 {% block content %}
-<section class="page-section">
-    <div class="container">
-        <h1 class=" text-center font-weight-bold text-dark">Top Adventures</h1>
+
+ <!-- Main content section -->
+
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <div class="my-5  text-center">
+                    <h1>
+                        Welcome to Explore More Adventure Agency
+                    </h1>
+                    <p class="mt-4"><em>"To Travel is to Live”— Hans Christian Andersen"</em></p>
+                    <p class=" text-black-50 mb-0 text-center destinationMessage">Here at Explore More we beleive everyone should 
+                        have the opportntit take an adventure and explore the world.</br> We hope you enjoy your visit here</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="page-section" id="topadventure">
+    <div class="blog-container">
+        <h1 class=" text-center font-weight-bold text-light">Top Adventures</h1>
         <br>
-        <h3 class="card-title ">{{adventure.name}}</h3>
+        <h3 class="card-title topAd">{{adventure.name}}</h3>
         <div class="row">
             {% for adventure in show_adventures|slice:"4" %}
             <div data-aos="fade-up" id="this{{ adventure.id }}"
                 class="col-lg-4 col-sm-6 portfolio-item aos-init aos-animate">
                 <a class="card-title" href="{% url 'adventure_detail' adventure.id %}">
-                    <div class="card text-white">
+                    <div class="card text-light">
                         <img src="{{ adventure.image.url}}" class="card-img-top" alt="adventure">
                         <div class="card-img-overlay shadow text-center">
                             <h3 class="card-title ">{{adventure.name}}</h3>
@@ -35,27 +53,30 @@
     </div>
 </section>
 
-<section class="page-section" id="testimonial">
-    <div class="row bg-light skew1">
-        <!-- Testimonials -->
-        <!-- https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459 -->
-        <!-- https://startbootstrap.com/previews/agency -->
-        <div id="testimonial skew2" class="testimonial skew2 container-fluid">
-            <section class="team-section text-center">
-                <h1 class="font-weight-bold testimonials text-light">Latest Adventure Reviews</h1>
-                <div class="row text-center">
-                    <!-- Testimonial 1-->
-                    <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1000">
+
+<!-- Review section-->
+
+<section class="page-section bg-w" id="review">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading">Latest Adventure Reviews</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card bg-navy py-4 h-100">
+                    <div class="card-body text-center">
                         <div class="testimonial">
                             <div class="avatar mx-auto">
                                 <img src="{% static 'images/person1.jpg' %}"
                                     class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member2g">
                             </div>
-                            <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
-                            <p class="font-weight-normal dark-grey-text">
-                                <i class="fa fa-quote-left pr-2"></i>Tour Project was a life changing for me. I had the
+                            <h4 class="font-weight-bold text-light mt-4">Anna Deynah</h4>
+                            <p class="font-weight-normal text-light">
+                                <i class="fa fa-quote-left pr-2"></i>Explore More was a life changing for me. I had the
                                 opportunity to visit different places in Thailand and meet one of the harm and best
                                 people I ever seen.</p>
+                            <hr class="my-4" />
                             <div class="orange-text">
                                 <i class="fa fa-star"> </i>
                                 <i class="fa fa-star"> </i>
@@ -65,21 +86,23 @@
                             </div>
                         </div>
                     </div>
-                    <!--/ Testimonial 1-->
-                    <!-- Testimonial 2-->
-                    <div class="col-md-4 mb-md-0 mb-5" data-aos="fade-up" data-aos-duration="1100">
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card bg-navy py-4 h-100">
+                    <div class="card-body text-center">
                         <div class="testimonial">
                             <div class="avatar mx-auto">
                                 <img src="{% static 'images/person2.jpg' %}"
                                     class="rounded-circle z-depth-1 img-fluid alter_img" alt="trainer">
                             </div>
 
-                            <h4 class="font-weight-bold dark-grey-text mt-4">Larry Parker</h4>
-                            <!-- <h6 class="font-weight-bold blue-text my-3">Personal Trainer</h6> -->
-                            <p class="font-weight-normal dark-grey-text">
+                            <h4 class="font-weight-bold text-light mt-4">Larry Parker</h4>
+                            <p class="font-weight-normal text-light">
                                 <i class="fa fa-quote-left pr-2"></i>Last year I went to Mexico and it was without any
                                 doubt the best place I ever visited. From yoga classes to spars and the food, everything
                                 were beyond I thought in terms of experince.</p>
+                            <hr class="my-4" />
                             <div class="orange-text">
                                 <i class="fa fa-star"> </i>
                                 <i class="fa fa-star"> </i>
@@ -89,19 +112,20 @@
                             </div>
                         </div>
                     </div>
-                    <!--/ Testimonial 2-->
-                    <!-- Testimonial 3-->
-                    <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card bg-navy py-4 h-100">
+                    <div class="card-body text-center">
                         <div class="testimonial">
                             <div class="avatar mx-auto">
                                 <img src="{% static 'images/person3.jpg' %}"
                                     class="rounded-circle z-depth-1 img-fluid alter_img" alt="gym-member">
                             </div>
-                            <h4 class="font-weight-bold dark-grey-text mt-4">Kay Garland</h4>
-                            <p class="font-weight-normal dark-grey-text">
-                                <i class="fa fa-quote-left pr-2"></i>You will be delighted by doing one of the Tour
-                                Project retreats. At the begin of 2019 I traveled to Rio de Janeiro in Brazil and did
-                                kite-surfing classes too. I loved it!</p>
+                            <h4 class="font-weight-bold text-light mt-4">Kay Garland</h4>
+                            <p class="font-weight-normal text-light">
+                                <i class="fa fa-quote-left pr-2"></i>Explore More are brilliant at adventures. You will be delighted by joing them.</p>
+                                 <hr class="my-4" />
                             <div class="orange-text">
                                 <i class="fa fa-star"> </i>
                                 <i class="fa fa-star"> </i>
@@ -111,15 +135,58 @@
                             </div>
                         </div>
                     </div>
-                    <!--/ Testimonial 3-->
                 </div>
-            </section>
+            </div>
         </div>
-        <!--/ Testinonials -->
     </div>
 </section>
 
-<!-- Contact 2-->
+<!-- Featured Blog Story-->
+<section class="container-fluid" id="story">
+   <div class="blog-container my-5">
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-4 col-lg-5">
+                    <div class="mb-2 text-center text-lg-left">
+                        <h2 class="section-heading">Featured Travel Story</h2>
+                        <p class="text-black-50 my-2">Every month we select a new and exciting travel story to share with you.</p>
+                    </div>
+         
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="card text-white bg-story mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 marginAuto">
+                                    <div class="story-author text-center">
+                                        
+                                        <img src="{% static 'images/anna1.jpg' %}" alt="">
+                                        <h4>Anna Burke</h4>
+                                        <p>Travel Blogger</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <h5 class="card-title">Anna's Story</h5>
+                                    <p class="card-text text-justify">"On day three of the classic Inka Trail to Machu Picchu in Peru, we reached the summit of Abra de Runkuracay eager to take in the views around us. The day was unusually warm; wispy white clouds rolled in and out of
+                                        the deep green valleys, aided by a gentle breeze. We scuttled up to the highest point we could find. Even though the clouds obstructed much of the view, I could feel the enormity of the valley we were perched above.
+                                        I searched for snowy peaks in the distance, searched for the river far below. In that moment, I could do no more than revere my surroundings and feel that I was a part of something important. The history enveloped
+                                        me, the sights burned themselves into my memory, the crisp mountain air filled my lungs. My overwhelmed senses were reminding me: This is why I travel." Story by Anna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row text-right mt-2">
+                                <div class="col">
+                                    <a href="{% url 'view_blog' %}" class="btn btn-primary">Read more stories</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section-->
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">

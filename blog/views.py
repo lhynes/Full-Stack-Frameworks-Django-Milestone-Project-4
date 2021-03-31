@@ -6,8 +6,8 @@ from profiles.models import UserProfile
 
 
 # def view_blog(request):
-    # """ A view to return the blog page """
-  # return render(request, 'blog/blog.html')
+# """ A view to return the blog page """
+# return render(request, 'blog/blog.html')
 
 
 def view_blog(request):
@@ -45,7 +45,7 @@ def blog_post_detail(request, slug):
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
             new_comment.post = post
-            # Save the comment to the database
+            # Save the comment to the database - Admin can then approve via the admin dashbaord 
             new_comment.save()
     else:
         # Pre-fill email fiend of authenticated user
@@ -54,7 +54,7 @@ def blog_post_detail(request, slug):
                 profile = UserProfile.objects.get(user=request.user)
                 comment_form = CommentForm(initial={
                     'email': profile.user.email,
-                    })
+                })
             except UserProfile.DoesNotExist:
                 comment_form = CommentForm()
         else:

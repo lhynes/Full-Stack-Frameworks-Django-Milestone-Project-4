@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col">
-            {% include 'includes/main-header.html' %}
+    <div class="container adventures-header-container">
+        <div class="row">
+            <div class="col">
+                {% include 'includes/headers/adventure-detail-header.html' %}
+            </div>
         </div>
-    </div>
-</div>
+    </div> 
 {% endblock %}
 
 {% block content %}
@@ -59,7 +59,7 @@
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
+                                        <button class="decrement-qty btn btn-black "
                                             data-item_id="{{ adventure.id }}" id="decrement-qty_{{ adventure.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
@@ -70,7 +70,7 @@
                                         min="1" max="99" data-item_id="{{ adventure.id }}"
                                         id="id_qty_{{ adventure.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
+                                        <button class="increment-qty btn btn-black "
                                             data-item_id="{{ adventure.id }}" id="increment-qty_{{ adventure.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
@@ -82,13 +82,13 @@
                         </div>
 
                         <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <a href="{% url 'adventures' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'adventures' %}" class="btn btn-outline-black  mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-black  text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
