@@ -47,11 +47,12 @@ and allow users to create their own custom adventure packages.
     - [Frameworks, Libraries and Programs](#frameworks,-libraries-and-programs)
 
 5. [Testing](#testing)
+    - [Bugs](#bugs)
 
 6. [Deployment](#deployment)
     - [Heroku Deployment](#depl-heroku)
     - [Local Deployment (GitPod)](#depl-gitpod)
-    - [Bugs](#bugs)
+
 
 7. [Credits](#credits)
     - [Content](#content)
@@ -402,10 +403,19 @@ on different devices na doperating systems including:
 - Google Pexel phone on Chrome
 
 
-
 **Automated Testing**
 
 Unfortunately on this occasion I was unable to add automated testing due to time constraints but will add in future as this is best practice.
+
+
+## Bugs
+
+### DB & Images
+In the final two days before submission I had a issue with my Postgress DB which resulted in a full reset of the DB. 
+
+There also appears to be glitched wtih AWS as the images are on the site but at random choose to show or hide different images - given the time I will review this issue further. 
+
+I would like to thank the tutors for their support but we were unable to resolve or find a resolution to the issue in the given time. 
 
 
 **Language Testing**
@@ -493,15 +503,6 @@ STRIPE_SECRET | `<STRIPE_SECRET>`
 7. Create a local development server:
     - In the workCHANGE run the following command `Python3 manage.py runserver`.
     - You should now have a gitpod link to the deployed app. 
-
-## Bugs
-
-### DB & Images
-In the final two days before submission I had a issue with my Postgress DB which resulted in a full reset of the DB. 
-
-There also appears to be glitched wtih AWS as the images are on the site but at random choose to show or hide different images - given the time I will review this issue further. 
-
-I would like to thank the tutors for their support but we were unable to resolve or find a resolution to the issue in the given time. 
 
 
 
