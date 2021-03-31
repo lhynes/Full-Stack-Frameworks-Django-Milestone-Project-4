@@ -26,13 +26,13 @@ a {
 .btn-primary {
     color: #fff;
     background-color: #092848;
-    border-color: #092848;
+    border-color: #1D97A9;
 }
 
 .btn-primary:hover {
     color: #092848;
     background-color: #fff;
-    border-color: #092848;
+    border-color: #1D97A9;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
@@ -258,7 +258,6 @@ textarea.form-control {
 }
 section#contact {
   background-color: #092848;
-  background-image: url('/media/map-image.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -908,7 +907,7 @@ img.img-fluid.logo {
     .header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
         /* background: url('/media/EM_home_logo.png') no-repeat center;*/
         height: 800px;
         background-size: cover;
@@ -918,25 +917,25 @@ img.img-fluid.logo {
     .contact-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/contact-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/contact-bg.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .about-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .blog-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/blog_detail.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/blog_detail.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .adventures-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/travelhero.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/travelhero.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     
