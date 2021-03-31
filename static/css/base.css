@@ -456,7 +456,7 @@ input[name='q']::placeholder {
 }
 
 .projects-section .project-text hr {
-    border-color: #b7a981;
+    border-color: #1D97A9;
     border-width: 0.25rem;
     width: 30%;
 }
@@ -771,8 +771,8 @@ li.nav-item:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #092848;
+    border: 1px solid #1D97A9;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -917,13 +917,13 @@ img.img-fluid.logo {
     .contact-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/contact-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url('/media/contact1-bg.png') no-repeat center center fixed;
         background-size: cover;
     }
     .about-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     .blog-header-container {
@@ -935,7 +935,7 @@ img.img-fluid.logo {
     .adventures-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/travelhero.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/travelhero1.png') no-repeat center center fixed;
         background-size: cover;
     }
     
@@ -952,19 +952,41 @@ img.img-fluid.logo {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 10rem;
-        padding-bottom: calc(10rem - 4.5rem);
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+        /* background: url('/media/EM_home_logo.png') no-repeat center;*/
+        height: 800px;
         background-size: cover;
-        padding-top: 10rem;
+        margin-bottom: 4.5rem;
+        height: 90vh;
     }
-
-      .blog-header-container {
+    .contact-header-container {
         padding-top: 10rem;
         padding-bottom: calc(15rem - 4.5rem);
-        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url('/media/header-bg.jpg') no-repeat center center fixed;
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url('/media/contact1-bg.png') no-repeat center center fixed;
         background-size: cover;
     }
-
-
+    .about-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url('/media/about-bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .blog-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/blog_detail.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .adventures-header-container {
+        padding-top: 10rem;
+        padding-bottom: calc(15rem - 4.5rem);
+        background:linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0%, rgba(92, 77, 66, 0.6) 100%), url('/media/travelhero1.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .container {
+    max-width: 100%;
+   }
 
     h3.card-title.topAd {
     color: white;
