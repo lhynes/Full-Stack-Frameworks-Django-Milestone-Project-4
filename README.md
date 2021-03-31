@@ -493,11 +493,19 @@ STRIPE_SECRET | `<STRIPE_SECRET>`
     - In the workCHANGE run the following command `Python3 manage.py runserver`.
     - You should now have a gitpod link to the deployed app. 
 
+# Bugs
+
+### DB & Images
+In the final two days before submission I had a issue with my Postgress DB which resulted in a full reset of the DB. 
+
+There also appears to be glitched wtih AWS as the images are on the site but at random choose to show or hide different images - given the time I will review this issue further. 
+
+I would like to thank the tutors for their support but we were unable to resolve or find a resolution to the issue in the given time. 
+
+
 
 
 # Credits
-
-
 
 ### Media
 
@@ -512,9 +520,9 @@ STRIPE_SECRET | `<STRIPE_SECRET>`
 - [Collapsable](http://jsfiddle.net/hungerpain/eK8X5/7/)
 - [Corey Schafer's Django Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
 
-**Blog Implementation Tutorial**
+### Blog Implementation Tutorial
 
-In order to implement my brand new modules, I followed the following tutorials, with some additions of my own (such as adding images)
+For the blog models I drew inspiration from the following tutorials
 
 [Blog App](https://djangocentral.com/building-a-blog-application-with-django/)
 
